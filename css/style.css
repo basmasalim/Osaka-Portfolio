@@ -11,13 +11,21 @@
   padding: 0%;
   box-sizing: border-box;
 }
-.main-color {
-  color: #d71b5d;
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 30px;
+}
+img {
+  width: 100%;
+  display: block;
 }
 body {
   width: 100%;
   height: 100%;
   font-family: "Open Sans", sans-serif;
+}
+.main-color {
+  color: #d71b5d;
 }
 .w-fit {
   width: fit-content;
@@ -28,9 +36,34 @@ body {
 .card-shadow{
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
 }
-img {
-  width: 100%;
-  display: block;
+/* &=================================> scrollbar */
+/* Width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Height */
+::-webkit-scrollbar {
+  height: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #eeeeee8c;
+  box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2f131c;
+  border-radius: 100px;
+  box-shadow: inset 0 0 10px #eeeeeeaf;
+}
+/* !=================================> selection */
+::selection {
+  background-color: var(--main-color);
+  color: #000;
 }
 /* ^=================================> Navbar */
 .nav-link {
